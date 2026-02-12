@@ -3,15 +3,15 @@ import { TiShoppingCart } from "react-icons/ti";
 
 
 
-const Product = () => {
+const Product = ({item}) => {
   return <>
     <div className="product">
         <a href="/">
           <div className="img_product">
-          <img src="https://m.media-amazon.com/images/I/5184xnSu1fL._AC_SX342_.jpg" alt="" />
+          <img src={item.images[0]} alt="" />
           </div>
 
-          <p className="name_product">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum fuga, consequatur placeat praesentium dignissimos molestiae dolore magnam cum quis suscipit!</p>
+          <p className="name_product">{item.title}</p>
 
           <div className="stars">
               <FaStar />
@@ -21,7 +21,7 @@ const Product = () => {
               <FaStarHalfAlt />
           </div>
 
-          <p className="price">$299.99</p>
+          <p className="price">{item.price}</p>
         </a>
 
         <div className="icons">

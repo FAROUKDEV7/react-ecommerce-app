@@ -1,14 +1,63 @@
-import HeroSlider from "../../components/HeroSlider"
-import SliderProduct from "../../components/SliderProducts/SliderProduct"
+import { useEffect, useState } from "react";
+import HeroSlider from "../../components/HeroSlider";
+import SliderProduct from "../../components/SliderProducts/SliderProduct";
+
+const categories = [
+  "smartphones",
+  "mobile-accessories",
+  "laptops",
+  "tablets",
+  "sunglasses",
+  "sports-accessories",
+];
 
 const Home = () => {
-  return <>
-    <HeroSlider />
-    <SliderProduct title = "Mobile"/>
-    <SliderProduct title = "Laptop"/>
-    <SliderProduct title = "PlayStation"/>
-    <SliderProduct title = "Graps"/>
-  </>
-}
+  const [products, setProducts] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
-export default Home
+  // fetch data from api
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const results = await Promise.all(
+          categories.map(async (category) => {
+            const res = await fetch(
+              `https://dummyjson.com/products/category/${category}`,
+            );
+            const data = await res.json();
+            return { [category]: data.products };
+          }),
+        );
+        const productsData = Object.assign({}, ...results);
+        setProducts(productsData);
+      } catch (erorr) {
+        console.log(erorr);
+      }finally{
+        setIsLoading(false)
+      }
+    };
+    fetchProducts();
+  }, []);
+
+  return (
+    <>
+      <HeroSlider />
+
+      {isLoading ? (
+        <p style={{textAlign:"center"}}>Loading....</p>
+      ) : (
+        categories.map((category) => {
+          return (
+            <SliderProduct
+              data={products[category]}
+              key={category}
+              title={category.replace("-", " ")}
+            />
+          );
+        })
+      )}
+    </>
+  );
+};
+
+export default Home;

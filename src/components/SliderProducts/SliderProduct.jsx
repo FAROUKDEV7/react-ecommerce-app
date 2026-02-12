@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
 
-const SliderProduct = ({ title }) => {
+const SliderProduct = ({ data, title }) => {
   return (
     <>
       <div className="slider_product">
@@ -16,9 +16,9 @@ const SliderProduct = ({ title }) => {
           </div>
 
           <Swiper
-            loop = {true}
+            loop={true}
             navigation={true}
-            modules={[Autoplay , Navigation]}
+            modules={[Autoplay, Navigation]}
             className="mySwiper"
             slidesPerView={4}
             autoplay={{
@@ -26,36 +26,13 @@ const SliderProduct = ({ title }) => {
               disableOnInteraction: false,
             }}
           >
-            <SwiperSlide>
-              <Product />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Product />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Product />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Product />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Product />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Product />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Product />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Product />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Product />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Product />
-            </SwiperSlide>
+            {data.map((item) => {
+              return (
+                <SwiperSlide>
+                  <Product item={item}/>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
       </div>
