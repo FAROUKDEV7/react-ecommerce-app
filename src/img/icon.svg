@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="OBJECTS" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 355.92 319.33">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #0090f0;
+      }
+
+      .cls-3 {
+        fill: #e58924;
+      }
+
+      .cls-3, .cls-4, .cls-2 {
+        font-size: 62.04px;
+        letter-spacing: .01em;
+      }
+
+      .cls-3, .cls-2 {
+        font-family: Montserrat-SemiBoldItalic, 'Montserrat SemiBoldItalic';
+        font-style: italic;
+        font-weight: 600;
+      }
+
+      .cls-4 {
+        fill: #d6d6d6;
+        font-family: ShowcardGothic-Reg, 'Showcard Gothic';
+      }
+    </style>
+  </defs>
+  <g>
+    <text class="cls-4" transform="translate(196.98 303.63) scale(.96 1)"><tspan x="0" y="0">Shop</tspan></text>
+    <g>
+      <text class="cls-3" transform="translate(20.64 303.82) scale(.96 1)"><tspan x="0" y="0">Online</tspan></text>
+      <text class="cls-2" transform="translate(20.64 303.82) scale(.96 1)"><tspan x="0" y="0">Online</tspan></text>
+    </g>
+  </g>
+  <g>
+    <path class="cls-1" d="m170.85,168.67c-27.52,0-53.51-15.55-66.05-40.6l-27.11-54.14c-12.37-24.71-39.9-37.94-66.92-32.19-4.82,1.02-9.55-2.05-10.57-6.86-1.02-4.81,2.05-9.55,6.86-10.57,34.97-7.44,70.56,9.67,86.56,41.63l27.11,54.14c10.95,21.86,35.41,34.18,59.5,29.96l113.17-21.68c4.84-.93,9.5,2.24,10.43,7.07.93,4.83-2.24,9.5-7.07,10.43l-113.31,21.71c-4.21.74-8.42,1.1-12.6,1.1Z"/>
+    <circle class="cls-1" cx="179.5" cy="197.44" r="21.06" transform="translate(-87.04 184.76) rotate(-45)"/>
+    <circle class="cls-1" cx="263.53" cy="180.85" r="21.06" transform="translate(-50.7 239.31) rotate(-45)"/>
+    <g>
+      <path class="cls-1" d="m143.11,124.96C221.9,89.72,246.52,34.77,254.09.56c-5.41-.85-11.07-.77-16.8.52L91.97,34l32.5,68c4.43,9.27,10.91,17.01,18.65,22.96Z"/>
+      <path class="cls-1" d="m291.79,41.88c-1.27-20.21-15.64-36.01-33.83-40.55-2.47,88.15-42.63,123.16-64.68,135.78.52-.09,1.04-.15,1.56-.26l101.59-21.15-4.64-73.82Z"/>
+    </g>
+  </g>
+</svg>
