@@ -6,7 +6,7 @@ import { TiShoppingCart } from "react-icons/ti";
 const Product = ({item}) => {
   return <>
     <div className="product">
-        <a href="/">
+        <a href={`/products/${item.id}`}>
           <div className="img_product">
           <img src={item.images[0]} alt="" />
           </div>
